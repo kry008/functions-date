@@ -5,7 +5,7 @@ GitHub:
 
 
 NPM:
-![NPM](https://img.shields.io/npm/l/date_fuctions) ![npm](https://img.shields.io/npm/dw/functions-date) ![npm](https://img.shields.io/npm/v/functions-date)
+![NPM](https://img.shields.io/npm/l/functions-date) ![npm](https://img.shields.io/npm/dw/functions-date) ![npm](https://img.shields.io/npm/v/functions-date)
 ## Installation
 ```console
 npm i functions-date
