@@ -1,5 +1,5 @@
 {
-  "name": "functions_date",
+  "name": "functions-date",
   "version": "0.0.1",
   "description": "A package with an appropriate date in an appropriate format, according to the programmer's needs.",
   "main": "index.js",
@@ -15,13 +15,13 @@
     "en",
     "de"
   ],
-  "homepage": "https://github.com/kry008/functions_date",
+  "homepage": "https://github.com/kry008/functions-date",
   "bugs": {
-    "url": "https://github.com/kry008/functions_date/issues"
+    "url": "https://github.com/kry008/functions-date/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kry008/functions_date.git"
+    "url": "https://github.com/kry008/functions-date.git"
   },
   "author": "kry008",
   "license": "BSD 2"
