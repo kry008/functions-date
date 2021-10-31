@@ -1,19 +1,22 @@
 const Data = new Date();
-var language = 1;//0 - EN, 1 - PL, 2 - DE
+var language = 1;//0 - EN, 1 - PL, 2 - DE, 3 - RU
 var debug = false;
 
 var dayOfWeek = []
 dayOfWeek[0] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 dayOfWeek[1] = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
 dayOfWeek[2] = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+dayOfWeek[3] = ["Воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
 var monthOfWeek = []
 monthOfWeek[0] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 monthOfWeek[1] = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 monthOfWeek[2] = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+monthOfWeek[3] = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
 var seasons_tab = [];
 seasons_tab[0] = ["Spring", "Summer", "Autumn", "Winter"]
 seasons_tab[1] = ["Wiosna", "Lato", "Jesień", "Zima"]
 seasons_tab[2] = ["Frühling", "Sommer", "Herbst", "Winter"]
+seasons_tab[3] = ["Весна", "лето", "осень", "зима"]
 exports.debug = function(debug = false) {
     console.log(Data);
     console.log(language);
@@ -47,6 +50,15 @@ exports.language = function(lang)
             language = 2;
             if (debug) {
                 console.log("DE")
+            }
+            break;
+    
+        case "ru":
+        case "3":
+        case 3:
+            language = 3;
+            if (debug) {
+                console.log("RU")
             }
             break;
     

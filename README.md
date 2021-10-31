@@ -1,11 +1,16 @@
 # Date Functions
 GitHub:
-![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions-date) ![GitHub issues](https://img.shields.io/github/issues/kry008/functions-date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions-date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions-date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions-date) ![GitHub Repo stars](https://img.shields.io/github/stars/kry008/functions-date?style=social) 
-
+![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions-date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions-date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions-date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions-date) ![GitHub Repo stars](https://img.shields.io/github/stars/kry008/functions-date?style=social)  
+Errors (Bugs): ![GitHub issues by-label](https://img.shields.io/github/issues/kry008/functions-date/Error)/![GitHub closed issues by-label](https://img.shields.io/github/issues-closed/kry008/functions-date/Errors)  
+New feature request: ![GitHub issues by-label](https://img.shields.io/github/issues/kry008/functions-date/New%20feature)
 
 
 NPM:
 ![NPM](https://img.shields.io/npm/l/functions-date) ![npm](https://img.shields.io/npm/dw/functions-date) ![npm](https://img.shields.io/npm/v/functions-date)
+  
+
+This package was created to speed up application development by reducing the amount of code a developer would have to write, and so it has it all in one package.
+
 ## Installation
 ```console
 npm i functions-date
@@ -27,6 +32,10 @@ var variable = df.function()
 ```js
 import {function_name1, function_name2, ... } from  "functions-date";
 ```
+
+## Demo
+https://runkit.com/kry008/functions-date-example
+
 ## Functions
 ```js
 //changing language, available EN - 0, PL - 1, DE - 2 
