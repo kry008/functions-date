@@ -1,20 +1,22 @@
-# Date Functions
+# functions-date
 GitHub:
-![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions_date) ![GitHub all releases](https://img.shields.io/github/downloads/kry008/functions_date/total) ![GitHub issues](https://img.shields.io/github/issues/kry008/functions_date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions_date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions_date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions_date)
+![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions-date) ![GitHub all releases](https://img.shields.io/github/downloads/kry008/functions-date/total) ![GitHub issues](https://img.shields.io/github/issues/kry008/functions-date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions-date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions-date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions-date) ![GitHub Repo stars](https://img.shields.io/github/stars/kry008/functions-date?style=social) 
+Follow ME: ![GitHub followers](https://img.shields.io/github/followers/kry008?style=social)
+
 
 NPM:
-![NPM](https://img.shields.io/npm/l/date_fuctions) ![npm](https://img.shields.io/npm/dw/functions_date) ![npm](https://img.shields.io/npm/v/functions_date)
+![NPM](https://img.shields.io/npm/l/date_fuctions) ![npm](https://img.shields.io/npm/dw/functions-date) ![npm](https://img.shields.io/npm/v/functions-date)
 ## Installation
 ```console
-npm i functions_date
+npm i functions-date
 ```
 ## Importing package
 ```js
-var df = require("functions_date")
+var df = require("functions-date")
 ```
 or
 ```js
-import { name_of_fuctions } from "functions_date";
+import { name_of_fuctions } from "functions-date";
 ```
 ## Usage
 ### require
@@ -23,7 +25,7 @@ var variable = df.function()
 ```
 ### import
 ```js
-import {function_name1, function_name2, ... } from  "functions_date";
+import {function_name1, function_name2, ... } from  "functions-date";
 ```
 ## Functions
 ```js
