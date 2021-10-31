@@ -1,0 +1,28 @@
+{
+  "name": "functions_date",
+  "version": "0.0.1",
+  "description": "A package with an appropriate date in an appropriate format, according to the programmer's needs.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "date",
+    "functions",
+    "quick_programming",
+    "Date",
+    "data",
+    "pl",
+    "en",
+    "de"
+  ],
+  "homepage": "https://github.com/kry008/functions_date",
+  "bugs": {
+    "url": "https://github.com/kry008/functions_date/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kry008/functions_date.git"
+  },
+  "author": "kry008",
+  "license": "BSD 2"
+}
