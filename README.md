@@ -1,6 +1,6 @@
 # Date Functions
 GitHub:
-![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions-date) ![GitHub all releases](https://img.shields.io/github/downloads/kry008/functions-date/total) ![GitHub issues](https://img.shields.io/github/issues/kry008/functions-date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions-date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions-date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions-date) ![GitHub Repo stars](https://img.shields.io/github/stars/kry008/functions-date?style=social) 
+![GitHub repo size](https://img.shields.io/github/repo-size/kry008/functions-date) ![GitHub issues](https://img.shields.io/github/issues/kry008/functions-date) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kry008/functions-date) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/kry008/functions-date) ![GitHub package.json version](https://img.shields.io/github/package-json/v/kry008/functions-date) ![GitHub Repo stars](https://img.shields.io/github/stars/kry008/functions-date?style=social) 
 
 
 
