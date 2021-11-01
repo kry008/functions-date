@@ -1,8 +1,6 @@
 const crypto = require("crypto");
 const Data = new Date();
 var language = 1;//0 - EN, 1 - PL, 2 - DE, 3 - RU, 4 - FR
-var deb = 0;
-exports.deb
 var dayOfWeek = []
 dayOfWeek[0] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 dayOfWeek[1] = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
