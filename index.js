@@ -72,8 +72,8 @@ exports.language = function(lang)
     
         case "fr":
         case "FR":
-        case "3":
-        case 3:
+        case "4":
+        case 4:
             language = 4;
             if (debug) {
                 console.log("FR")
