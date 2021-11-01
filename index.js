@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const Data = new Date();
 var language = 1;//0 - EN, 1 - PL, 2 - DE, 3 - RU
 var debug = false;
@@ -7,16 +8,19 @@ dayOfWeek[0] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
 dayOfWeek[1] = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
 dayOfWeek[2] = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
 dayOfWeek[3] = ["Воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+dayOfWeek[4] = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 var monthOfWeek = []
 monthOfWeek[0] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 monthOfWeek[1] = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 monthOfWeek[2] = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 monthOfWeek[3] = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+monthOfWeek[4] = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 var seasons_tab = [];
 seasons_tab[0] = ["Spring", "Summer", "Autumn", "Winter"]
 seasons_tab[1] = ["Wiosna", "Lato", "Jesień", "Zima"]
 seasons_tab[2] = ["Frühling", "Sommer", "Herbst", "Winter"]
 seasons_tab[3] = ["Весна", "лето", "осень", "зима"]
+seasons_tab[4] = ["Printemps", "Été", "Automne", "Hiver"]
 exports.debug = function(debug = false) {
     console.log(Data);
     console.log(language);
@@ -30,6 +34,7 @@ exports.language = function(lang)
     switch (lang) {
         case "en":
         case "0":
+        case "EN":
         case 0:
             language = 0;
             if (debug) {
@@ -37,6 +42,7 @@ exports.language = function(lang)
             }
             break;
         case "pl":
+        case "PL":
         case "1":
         case 1:
             language = 1;
@@ -45,6 +51,7 @@ exports.language = function(lang)
             }
             break;
         case "de":
+        case "DE":
         case "2":
         case 2:
             language = 2;
@@ -54,6 +61,7 @@ exports.language = function(lang)
             break;
     
         case "ru":
+        case "RU":
         case "3":
         case 3:
             language = 3;
@@ -62,6 +70,15 @@ exports.language = function(lang)
             }
             break;
     
+        case "fr":
+        case "FR":
+        case "3":
+        case 3:
+            language = 4;
+            if (debug) {
+                console.log("FR")
+            }
+            break;
         default:
             console.error("Language unsupported, default EN")
             language = 0;
@@ -529,25 +546,25 @@ exports.timestampSQL_given_date = function(date)
 }
 exports.r0_9 = function()
 {
-    return Math.floor(Math.random() * 10);
+    return crypto.randomInt(0, 9);
 }
 exports.r0_10 = function()
 {
-    return Math.floor(Math.random() * 11);
+    return crypto.randomInt(0, 10);
 }
 exports.r1_10 = function()
 {
-    return (Math.floor(Math.random() * 10) + 1);
+    return crypto.randomInt(1, 10);
 }
 exports.r0_99 = function()
 {
-    return Math.floor(Math.random() * 100);
+    return crypto.randomInt(0, 99);
 }
 exports.r0_100 = function()
 {
-    return Math.floor(Math.random() * 101);
+    return crypto.randomInt(0, 100);
 }
 exports.r1_100 = function()
 {
-    return (Math.floor(Math.random() * 100) + 1)
+    return crypto.randomInt(1, 100);
 }

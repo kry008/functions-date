@@ -3,8 +3,7 @@
   "version": "0.0.3",
   "description": "A package with an appropriate date in an appropriate format, according to the programmer's needs.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "date",
     "functions",
