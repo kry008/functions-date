@@ -1,6 +1,6 @@
 {
   "name": "functions-date",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A package with an appropriate date in an appropriate format, according to the programmer's needs.",
   "main": "index.js",
   "scripts": {},
@@ -12,7 +12,11 @@
     "data",
     "pl",
     "en",
-    "de"
+    "de",
+    "front-end",
+    "development",
+    "tool",
+    "back-end"
   ],
   "homepage": "https://github.com/kry008/functions-date",
   "bugs": {
