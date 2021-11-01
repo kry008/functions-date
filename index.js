@@ -1,8 +1,6 @@
 const crypto = require("crypto");
 const Data = new Date();
-var language = 1;//0 - EN, 1 - PL, 2 - DE, 3 - RU
-var debug = false;
-
+var language = 1;//0 - EN, 1 - PL, 2 - DE, 3 - RU, 4 - FR
 var dayOfWeek = []
 dayOfWeek[0] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 dayOfWeek[1] = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
@@ -21,15 +19,12 @@ seasons_tab[1] = ["Wiosna", "Lato", "Jesień", "Zima"]
 seasons_tab[2] = ["Frühling", "Sommer", "Herbst", "Winter"]
 seasons_tab[3] = ["Весна", "лето", "осень", "зима"]
 seasons_tab[4] = ["Printemps", "Été", "Automne", "Hiver"]
-exports.debug = function(debug = false) {
+exports.debug = function() {
     console.log(Data);
     console.log(language);
-    console.log(debug);
-    debug = this.debug
 }
 exports.language = function(lang)
 {
-    console.log(`Language = ${lang}`)
     //language = lang;
     switch (lang) {
         case "en":
@@ -37,27 +32,21 @@ exports.language = function(lang)
         case "EN":
         case 0:
             language = 0;
-            if (debug) {
-                console.log("EN")
-            }
+            console.log(`Language = ${language}`)
             break;
         case "pl":
         case "PL":
         case "1":
         case 1:
             language = 1;
-            if (debug) {
-                console.log("PL")
-            }
+            console.log(`Language = ${language}`)
             break;
         case "de":
         case "DE":
         case "2":
         case 2:
             language = 2;
-            if (debug) {
-                console.log("DE")
-            }
+            console.log(`Language = ${language}`)
             break;
     
         case "ru":
@@ -65,9 +54,7 @@ exports.language = function(lang)
         case "3":
         case 3:
             language = 3;
-            if (debug) {
-                console.log("RU")
-            }
+            console.log(`Language = ${language}`)
             break;
     
         case "fr":
@@ -75,9 +62,7 @@ exports.language = function(lang)
         case "4":
         case 4:
             language = 4;
-            if (debug) {
-                console.log("FR")
-            }
+            console.log(`Language = ${language}`)
             break;
         default:
             console.error("Language unsupported, default EN")
@@ -87,16 +72,10 @@ exports.language = function(lang)
 }
 exports.D = function() //today Day Name
 {
-    if (debug) {
-        console.log(language + " " + (Data.getDay()))
-    }
     return dayOfWeek[language][Data.getDay()]
 }
 exports.D_given_date = function(date) //from object Date
 {
-    if (debug) {
-        console.log(language + " " + date.getDay())
-    }
     return dayOfWeek[language][date.getDay()]
 }
 exports.D_given_number = function(day_number) //Day of week, from 1
@@ -109,20 +88,15 @@ exports.D_given_number = function(day_number) //Day of week, from 1
 }
 exports.M = function() //today month Name
 {
-    if (debug) {
-        console.log(language + " " + (Data.getMonth()))
-    }
     return monthOfWeek[language][Data.getMonth()]
 }
 exports.M_given_date = function(date) //from object Date
 {
-    console.log(language + " " + (date.getMonth()))
     return monthOfWeek[language][date.getMonth()]
 }
 exports.M_given_number = function(month_number) //month, from 1
 {
     month_number = month_number - 1;
-    console.log(language + " " + month_number)
     return monthOfWeek[language][month_number]
 }
 exports.DDMMYYYY = function(char = "-")//Char between dayXmonthXyear
@@ -146,7 +120,6 @@ exports.HHMM24 = function(char=":")
     var hours = Data.getHours();
     var minutes = Data.getMinutes();
     minutes = minutes < 10 ? '0'+minutes : minutes;
-
     return hours + char + minutes
 }
 exports.HHMM12 = function(char=":", am="AM", pm="PM")
@@ -184,7 +157,6 @@ exports.HHMMSS24 = function(char=":")
     var seconds = Data.getSeconds();
     minutes = minutes < 10 ? '0'+minutes : minutes;
     seconds = seconds < 10 ? '0'+seconds : seconds;
-
     return hours + char + minutes + char + seconds
 }
 exports.HHMMSS12 = function(char=":", am="AM", pm="PM")
@@ -206,7 +178,6 @@ exports.HHMMSS24_given_date = function(date, char=":")
     var seconds = date.getSeconds();
     minutes = minutes < 10 ? '0'+minutes : minutes;
     seconds = seconds < 10 ? '0'+seconds : seconds;
-
     return hours + char + minutes + char + seconds
 }
 exports.HHMMSS12_given_date = function(date, char=":", am="AM", pm="PM")
