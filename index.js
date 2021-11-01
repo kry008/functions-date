@@ -80,6 +80,9 @@ exports.D_given_date = function(date) //from object Date
 }
 exports.D_given_number = function(day_number) //Day of week, from 1
 {
+    if (day_number == 7) {
+        day_number = 0
+    }
     console.log(language + " " + day_number)
     return dayOfWeek[language][day_number]
 }
