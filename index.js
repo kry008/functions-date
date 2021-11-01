@@ -115,6 +115,56 @@ exports.MMDDYYYY_given_date = function(date, char = "-")//Char between monthXday
 {
     return (date.getMonth() + 1) + char + date.getDate() + char + date.getFullYear()
 }
+exports.YYYYMMDD = function(char = "-")
+{
+    return Data.getFullYear() + char + (Data.getMonth() + 1) + char + Data.getDate()
+}
+exports.YYYYMMDD_given_date = function(date, char = "-")
+{
+    return date.getFullYear() + char + (date.getMonth() + 1) + char + date.getDate()
+}
+exports.YYYYDDMM = function(char = "-")
+{
+    return Data.getFullYear() + char + Data.getDate() + char + (Data.getMonth() + 1)
+}
+exports.YYYYDDMM_given_date = function(date, char = "-")
+{
+    return date.getFullYear() + char + date.getDate() + char + (date.getMonth() + 1)
+}
+
+exports.DDMMYY = function(char = "-")//Char between dayXmonthXyear
+{
+    return Data.getDate() + char + (Data.getMonth() + 1) + char + (Data.getFullYear() % 100)
+}
+exports.MMDDYY = function(char = "-")//Char between monthXdayXyear
+{
+    return (Data.getMonth() + 1) + char + Data.getDate() + char + (Data.getFullYear() % 100)
+}
+exports.DDMMYY_given_date = function(date, char = "-")//Char between dayXmonthXyear
+{
+    return date.getDate() + char + (date.getMonth() + 1) + char + (date.getFullYear() % 100)
+}
+exports.MMDDYY_given_date = function(date, char = "-")//Char between monthXdayXyear
+{
+    return (date.getMonth() + 1) + char + date.getDate() + char + (date.getFullYear() % 100)
+}
+exports.YYMMDD = function(char = "-")
+{
+    return (Data.getFullYear() % 100) + char + (Data.getMonth() + 1) + char + Data.getDate()
+}
+exports.YYMMDD_given_date = function(date, char = "-")
+{
+    return (date.getFullYear() % 100) + char + (date.getMonth() + 1) + char + date.getDate()
+}
+exports.YYDDMM = function(char = "-")
+{
+    return (Data.getFullYear() % 100) + char + Data.getDate() + char + (Data.getMonth() + 1)
+}
+exports.YYDDMM_given_date = function(date, char = "-")
+{
+    return (date.getFullYear() % 100) + char + date.getDate() + char + (date.getMonth() + 1)
+}
+
 exports.HHMM24 = function(char=":")
 {
     var hours = Data.getHours();
@@ -191,6 +241,52 @@ exports.HHMMSS12_given_date = function(date, char=":", am="AM", pm="PM")
     minutes = minutes < 10 ? '0'+minutes : minutes;
     seconds = seconds < 10 ? '0'+seconds : seconds;
     return hours + char + minutes + char + seconds + " " + ampm
+}
+exports.HHMMSSMs24 = function(char=":")
+{
+    var hours = Data.getHours();
+    var minutes = Data.getMinutes();
+    var seconds = Data.getSeconds();
+    var ms = Data.getMilliseconds();
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    seconds = seconds < 10 ? '0'+seconds : seconds;
+    return hours + char + minutes + char + seconds + char + ms 
+}
+exports.HHMMSSMs12 = function(char=":", am="AM", pm="PM")
+{
+    var hours = Data.getHours();
+    var minutes = Data.getMinutes();
+    var seconds = Data.getSeconds();
+    var ms = Data.getMilliseconds();
+    var ampm = hours >= 12 ? pm : am;
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    seconds = seconds < 10 ? '0'+seconds : seconds;
+    return hours + char + minutes + char + seconds + char + ms  + " " + ampm
+}
+exports.HHMMSSMs24_given_date = function(date, char=":")
+{
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var ms = date.getMilliseconds();
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    seconds = seconds < 10 ? '0'+seconds : seconds;
+    return hours + char + minutes + char + seconds + char + ms 
+}
+exports.HHMMSSMs12_given_date = function(date, char=":", am="AM", pm="PM")
+{
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var ms = date.getMilliseconds();
+    var ampm = hours >= 12 ? pm : am;
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    seconds = seconds < 10 ? '0'+seconds : seconds;
+    return hours + char + minutes + char + seconds + char + ms + " " + ampm
 }
 exports.TimeMS = function()
 {

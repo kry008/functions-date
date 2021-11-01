@@ -23,22 +23,34 @@ or
 ```js
 import { name_of_fuctions } from "functions-date";
 ```
-## Usage
+## Usage example
 ### require
 ```js
-var variable = df.function()
+var df = require("functions-date")
+var variable = df.D_given_number(1) //Return: Monday
 ```
 ### import
 ```js
-import {function_name1, function_name2, ... } from  "functions-date";
+import {D_given_number} from  "functions-date";
+D_given_number(1) //Return: Monday
 ```
 
 ## Demo
 https://runkit.com/kry008/functions-date-example
 
+## Languages
+| Number | Short | Name |
+|---|---|---|
+| 0 | EN | English |
+| 1 | PL | Polish |
+| 2 | DE | German |
+| 3 | RU | Russian |
+| 4 | FR | French |
+
+
 ## Functions
 ```js
-//changing language, available EN - 0, PL - 1, DE - 2 
+//changing language
 language(language_code)
 //Today's name according to the set language e.g. Monday
 D()
@@ -52,24 +64,32 @@ M()
 M_given_date(date_object)
 //Month name as an argument of the month number, result e.g. 1 - January
 M_given_number(month_number)
-//Shows today's date in the format Day (D) Month (M) Year (Y), and optionally you can enter a character between DD MM YYYY as a function value, by default "-"
+//Shows today's date in the format Day (D) Month (M) Year (Y) (4 or 2 numbers), and optionally you can enter a character between DD MM YYYY as a function value, by default "-"
 DDMMYYYY(char = "-")
 MMDDYYYY(char = "-")
-//Shows the date from the Date object in the Day (D) Month (M) Year (Y) format, and optionally you can enter a character between DD MM YYYY as a function value, by default "-"
+YYYYMMDD(char = "-")
+YYYYDDMM(char = "-")
+//Shows the date from the Date object in the Day (D) Month (M) Year (Y) (4 or 2 numbers) format, and optionally you can enter a character between DD MM YYYY as a function value, by default "-"
 DDMMYYYY_given_date(date, char = "-")
 MMDDYYYY_given_date(date, char = "-")
-//Shows actual time (24h), HH MM (SS), and optionally you can enter a character between HH MM (SS) as a function value, by default ":"
+YYYYMMDD_given_date(date, char = "-")
+YYYYDDMM_given_date(date, char = "-")
+//Shows actual time (24h), HH MM (SS) (Ms), and optionally you can enter a character between HH MM (SS) as a function value, by default ":"
 HHMM24(char=":")
 HHMMSS24(char=":")
-//Shows time (24h) from Date object, HH MM (SS), and optionally you can enter a character between HH MM (and SS) as a function value, by default ":"
+HHMMSSMs24(char=":")
+//Shows time (24h) from Date object, HH MM (SS) (Ms), and optionally you can enter a character between HH MM (and SS) as a function value, by default ":"
 HHMM24_given_date(date, char=":")
 HHMMSS24_given_date(date, char=":")
-//Shows actual time in the 12h pattern, HH MM (and SS) optionally you can enter a sign between HH and MM (and SS) and the abbreviation AM and PM
+HHMMSSMs24_given_date(date, char=":")
+//Shows actual time in the 12h pattern, HH MM (and SS) (Ms) optionally you can enter a sign between HH and MM (and SS) and the abbreviation AM and PM
 HHMM12(char=":", am="AM", pm="PM")
 HHMMSS12(char=":", am="AM", pm="PM")
-//Shows Date object time in the 12h pattern, optionally you can enter a sign between HH and MM (and SS) and the abbreviation AM and PM
+HHMMSSMs12(char=":", am="AM", pm="PM")
+//Shows Date object time in the 12h pattern, optionally you can enter a sign between HH and MM (and SS) (Ms) and the abbreviation AM and PM
 HHMM12_given_date(date, char=":", am="AM", pm="PM")
 HHMMSS12_given_date(date, char=":", am="AM", pm="PM")
+HHMMSSMs12_given_date(date, char=":", am="AM", pm="PM")
 //Shows miliseconds since January 1, 1970 till today
 TimeMS()
 //Shows miliseconds since January 1, 1970 till Date object
@@ -121,3 +141,11 @@ r0_99() //0-99
 r0_100() //0-00
 r1_100() //1-100
 ```
+
+## TODO
+| Priority* | Expected version | Link/Description |
+|---|---|---|
+| 1 | 0.1.X | [More types of DD MM YY HH MM SS](https://github.com/kry008/functions-date/issues/3 "GitHub") |
+| 2 | 1.X.X | [Transfer the variables with the names of days, months and seasons to the JSON file](https://github.com/kry008/functions-date/issues/5 "GitHub") |
+| 3 | X.X.X | More languages |
+*1(hight)-3(low)
