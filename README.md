@@ -145,7 +145,9 @@ r1_100() //1-100
 ## TODO
 | Priority* | Expected version | Link/Description |
 |---|---|---|
-| 1 | 0.1.X | [More types of DD MM YY HH MM SS](https://github.com/kry008/functions-date/issues/3 "GitHub") |
+| 0 | 0.1.X | [More types of DD MM YY HH MM SS](https://github.com/kry008/functions-date/issues/3 "GitHub") |
 | 2 | 1.X.X | [Transfer the variables with the names of days, months and seasons to the JSON file](https://github.com/kry008/functions-date/issues/5 "GitHub") |
 | 3 | X.X.X | More languages |
-*1(hight)-3(low)
+
+
+*1(hight)-3(low), 0 - Done
